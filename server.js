@@ -12,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
+const port = process.env.PORT || 5000;
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://1144:1144@cluster0.dyfxi.mongodb.net/taskmanager?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
